@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Self driving car simulation</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+    
+    </head>
+    <body>
+        <canvas id="carCanvas"></canvas>
+        <div id="verticalButtons"> 
+            <button onclick="save()"> 💾</button>
+            <button onclick="discard()">🗑️</button>
+        </div>
+        <div id="ndiv"class="slidecontainer">
+            <input onchange="saveSliders()" type="range" min="1" max="1000" value="50" class="slider" id="nSlider">
+            <div class="slidertext" id="nslidertext"></div>
+        </div>
+        <div id="vdiv" class="slidecontainer">
+            <input onchange="saveSliders()" type="range" min="0" max="300" value="50" class="slider" id="vSlider">
+            <div class="slidertext" id="vslidertext"></div>
+        </div>
+        <button onclick="window.location.reload()">Apply changes</button>
+        <canvas id="networkCanvas"></canvas>
+        <script src="visualizer.js"></script>
+        <script src="network.js"></script>
+        <script src="sensor.js"></script>
+        <script src="utils.js"></script>
+        <script src="road.js"></script>
+        <script src="controls.js"></script>
+        <script src="car.js"></script>
+        <script src="script.js"></script>
+        
+    </body>
+</html>
